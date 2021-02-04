@@ -6,7 +6,31 @@
     <title>魔影</title>
 </head>
 <body>
-    <div>程国杰是傻蛋！程国杰是傻蛋！程国杰是傻蛋！</div>
-    <div>程国杰是磨子蛋！程国杰是磨子蛋！程国杰是磨子蛋！</div>
+    <div>我叫程国杰，程国杰是傻蛋！</div>
+    <div>随机点名喝酒，摇到谁谁喝酒。</div>
+    <h1 class="userNmae">???</h1>
+    <button class="btn" onclick="beging()">开始</button>
+    <script type="text/javascript">
+        var mathArr = ['程国杰','张艺潇','贾成磊','魏浩男','李天阳','杨康','李国国'];
+        let doc = document.getElementsByClassName('userNmae')[0];
+        let btn = document.getElementsByClassName('btn')[0];
+        let timers = null;
+        let state = true;
+        function beging() {
+            if (timers) clearInterval(timers);
+            if (state) {
+                timers = setInterval(() => {
+                    var s = Math.round(Math.random() * (mathArr.length - 1));
+                    doc.innerHTML = mathArr[s];
+                }, 30);
+                state = false;
+                btn.innerHTML = '暂停';
+            } else {
+                state = true;
+                btn.innerHTML = '开始';
+                clearInterval(timers);
+            }
+        }
+    </script>
 </body>
 </html>
