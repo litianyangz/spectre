@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>魔影</title>
-    <style>
+     <style>
         body {
-            text-algin:center;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            width: 120px;
+            height: 34px;
+            background-color: rgb(7,193,96);
+            border-color: rgb(7,193,96);
+            color: #fff;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -14,7 +24,7 @@
     <div>我叫程国杰，程国杰是傻蛋！</div>
     <div>随机点名喝酒，摇到谁谁喝酒。</div>
     <h1 class="userNmae">???</h1>
-    <button class="btn" onclick="beging()">开始</button>
+    <div class="btn" onclick="beging()">开始</div>
     <script type="text/javascript">
         var mathArr = ['程国杰','张艺潇','贾成磊','魏浩男','李天阳','杨康','李国国'];
         let doc = document.getElementsByClassName('userNmae')[0];
